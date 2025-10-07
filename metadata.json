@@ -1,0 +1,8 @@
+{
+  "name": "Insta-Clone",
+  "description": "A modern social media feed interface inspired by Instagram, built with React and Tailwind CSS. It features stories, posts, reels, and interactive elements like emoji reactions and voice comments powered by Gemini.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ]
+}

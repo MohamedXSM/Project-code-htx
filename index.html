@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HintoriX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.22.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+<script>
+  tailwind.config = {
+      theme: {
+          extend: {
+              fontFamily: {
+                  sans: ['Cairo', 'sans-serif'],
+              },
+              colors: {
+                  primary: '#6366f1',
+                  secondary: '#8b5cf6',
+                  accent: '#06b6d4',
+                  success: '#10b981',
+                  dark: '#0f0f23',
+                  darker: '#0a0a1a',
+                  muted: '#1a1a2e',
+                  border: '#2d2d44'
+              },
+              animation: {
+                'glow-pulse': 'glowPulse 2s ease-in-out infinite alternate'
+              },
+              keyframes: {
+                glowPulse: {
+                    '0%': { boxShadow: '0 0 20px rgba(99, 102, 241, 0.3)' },
+                    '100%': { boxShadow: '0 0 40px rgba(99, 102, 241, 0.6), 0 0 60px rgba(99, 102, 241, 0.3)' }
+                }
+              }
+          }
+      }
+  }
+</script>
+<style>
+    .glass-card {
+        background: rgba(26, 26, 46, 0.7);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+    .text-gradient-aurora {
+        background: linear-gradient(135deg, #a7b2ff, #6366f1, #d4c4ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .story-pulse-glow {
+        box-shadow: 0 0 10px rgba(99, 102, 241, 0.6), 0 0 20px rgba(99, 102, 241, 0.4);
+        animation: pulse-border 2s infinite;
+    }
+    @keyframes pulse-border {
+        0% { box-shadow: 0 0 10px rgba(99, 102, 241, 0.6), 0 0 20px rgba(99, 102, 241, 0.4); }
+        50% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.8), 0 0 30px rgba(139, 92, 246, 0.6); }
+        100% { box-shadow: 0 0 10px rgba(99, 102, 241, 0.6), 0 0 20px rgba(99, 102, 241, 0.4); }
+    }
+</style>
+</head>
+  <body class="bg-darker text-white font-sans">
+    <div id="root"></div>
+  </body>
+</html>
